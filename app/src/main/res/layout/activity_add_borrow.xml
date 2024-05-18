@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddBorrowActivity">
+
+    <Spinner
+        android:id="@+id/sp_user"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/sp_book"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/sp_user"
+        app:layout_constraintStart_toStartOf="@+id/sp_user"
+        app:layout_constraintTop_toBottomOf="@+id/sp_user" />
+
+    <EditText
+        android:id="@+id/et_start_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Tanggal Peminjaman"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/sp_book"
+        app:layout_constraintStart_toStartOf="@+id/sp_book"
+        app:layout_constraintTop_toBottomOf="@+id/sp_book" />
+
+    <EditText
+        android:id="@+id/et_end_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Tanggal Pengembalian"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/et_start_date"
+        app:layout_constraintStart_toStartOf="@+id/et_start_date"
+        app:layout_constraintTop_toBottomOf="@+id/et_start_date" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_end_date" />
+</androidx.constraintlayout.widget.ConstraintLayout>
